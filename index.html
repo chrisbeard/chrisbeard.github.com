@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	  	<meta name="viewport" content="width=device-width">
+
+	  	<!-- CSS -->
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<!-- Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Lusitana' rel='stylesheet' type='text/css'>
+		<!-- Parallax -->
+		<script type="text/javascript" src="js/skrollr.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+
+		<script>
+			init = function() {
+				var skrollrOptions = {forceHeight: false},
+						skrollrToggle = function () {
+							if (window.innerWidth < 768) {
+								skrollr.init().destroy();
+							} else {
+								skrollr.init(skrollrOptions);
+							}
+							var width = document.body.clientWidth;
+							document.getElementById("skrollr-body").style.height = width * (5/16) + "px";
+							document.getElementById("skrollr-body2").style.height = width * (7/16) + "px";
+						}
+
+				window.onresize = skrollrToggle;
+				skrollrToggle();
+			}
+		</script>
+
+		<title>Chris Beard</title>
+	</head>
+
+	<body onload="init()">
+
+		<div class="container">
+			<div class="jumbotron">
+			<h1 class="title">Chris Beard</h1>
+			<h2 class="sub-title">Student. Musician. Programmer.</h2>
+			</div>
+		</div>
+		<article class="aboutMe">
+			<h3 class="article-title">About Me</h3>
+			
+			<p>I'm a rising-junior at Binghamton University, where I study Computer Science and Mathematics.</p>
+
+			<p>Lately, I've been interested in hackathons, web development, and slacklining.</p>
+
+			<p>I am excited to announce that I'll be doing research at the Rome Labs Air Force Base as an intern this summer.</p>
+
+			<p>If you want to get in touch, <a href="mailto:cbeard1@binghamton.edu">e-mail</a> is the best way.</p>
+		</article>
+
+		<div id="skrollr-body">
+			<img src="images/trombone.jpg" width="100%" data-bottom-top="margin-top:0vh" data-top-bottom="margin-top:-20vh" >
+		</div>
+
+		<article class="music">
+			<h3 class="article-title">Music</h3>
+			<p>I've been playing trombone since 2003, and I currently study with Don Robertson at Binghamton University.</p>
+
+			<p>I am a member of Don's low brass studio ensemble, as well as the Binghamton University Symphony Orchestra, which is directed by Dr. Timothy Perry.</p>
+
+			<p>You might also see me play in some of the music department's recitals, or at Binghamton's commencement ceremonies.</p>
+
+			<p>I make multi-track recordings of myself on trombone, and compose alternative electronic music. Some of my work is available on <a href="http://souncloud.com/trombeard">soundcloud</a>.</p>
+		</article>
+
+		<div id="skrollr-body2">
+			<img src="images/hackbu.jpg" width="100%" data-bottom-top="margin-top:0vh" data-top-bottom="margin-top:-20vh" >
+		</div>
+
+		<article class="programming">
+			<h3 class="article-title">Programming</h3>
+			<p>I just finished working on a research project with <a href="http://github.com/kjohns19">Kevin Johnson</a>, where we tried to create secure memory compartments on the OpenRISC CPU.</p>
+
+			<p>I've been hacking! I had a great time at HackPrinceton and HackBU this semester, and look forward to future hackathons. You can check out my hacks on my <a href="http://challengepost.com/users/chrisbeard">challengepost</a> page.</p>
+
+			<p>I'm working with <a href="http://itaiferber.net">Itai</a> to develop <a href="http://seemeco.de">seemeco.de</a>, a site which helps programmers build up a GitHub portfolio. We started it at HackPrinceton, where it won Wolfram Alpha's Best Education Hack.</p>
+
+			<p>Speaking of GitHub, you can find mine <a href="http://github.com/chrisbeard">here</a>.</p>
+
+			<!-- <p>Lately, I've been programming in C++, but I use C and Python from time to time. I don't use Java much anymore, but I plan to play with Java 8's new features soon.</p> -->
+
+			<p>Lately, I've been programming in C++, but I use C and Python from time to time. I used to program a lot in Java, and look forward to getting back into it at some point.</p>
+		</article>
+
+		<footer>&copy; Chris Beard, 2014</footer>
+	</body>
+</html>
